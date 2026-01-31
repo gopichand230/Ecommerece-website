@@ -12,7 +12,7 @@ export default function Cart() {
 
   async function fetchCartItems() {
     try {
-      const res = await axios.get("http://localhost:4000/api/cart", {
+      const res = await axios.get("https://ecommerece-website-2-m0gr.onrender.com/api/cart", {
         params: { userId }
       })
       if (res.status === 200) {
@@ -28,7 +28,7 @@ export default function Cart() {
   // 🗑 Delete item from cart
   async function deleteCartItem(productId) {
     try {
-      const res = await axios.delete("http://localhost:4000/api/cart", {
+      const res = await axios.delete("https://ecommerece-website-2-m0gr.onrender.com/api/cart", {
         data: { userId, productId }   // sending userId + productId
       })
       if (res.status === 200) {
